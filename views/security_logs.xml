@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="security_logs_tree_view" model="ir.ui.view">
+            <field name="name">security_logs_tree_view</field>
+            <field name="model">security.logs</field>
+            <field name="arch" type="xml">
+                <tree create="false" delete="false" edit="false">
+                    <field name="date"/>
+                    <field name="notes"/>
+                    <field name="table"/>
+                    <field name="user_id"/>
+                    <field name="record_id"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <record id="action_security_logs" model="ir.actions.act_window">
+            <field name="name">Security Logs</field>
+            <field name="res_model">security.logs</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem
+                id="menu_security_logs"
+                name="Security Logs"
+                parent="base.menu_security"
+                action="action_security_logs"
+                sequence="1"
+                groups="odoo_base_security.access_iron_fest"
+
+
+        />
+    </data>
+</odoo>

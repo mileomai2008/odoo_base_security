@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_iron_logs,access_iron_logs,model_security_logs,odoo_base_security.access_iron_fest,1,0,0,0

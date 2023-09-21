@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="res_config_setting_security_view_form" model="ir.ui.view">
+            <field name="name">res.config.security.logs.form</field>
+            <field name="model">res.config.settings</field>
+            <field name="priority" eval="60"/>
+            <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[hasclass('settings')]" position="inside">
+                    <div class="app_settings_block" data-string="Security Logs" string="Security Logs" data-key="security_logs">
+                        <h2>Security Logs</h2>
+                        <div class="row mt16 o_settings_container" id="security_logs">
+                            <div class="col-12 col-lg-6 o_setting_box" id="debuggers">
+                                <div class="o_setting_right_pane">
+                                    <label for="debuggers"/>
+                                    <div id="debuggers" class="oe_inline">
+                                        <field name="debuggers" password="True"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-6 o_setting_box" id="active">
+                                <div class="o_setting_right_pane">
+                                    <label for="activate_feature"/>
+                                    <div id="activate_feature" class="oe_inline">
+                                        <field name="activate_feature"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+        <record id="action_res_config_settings_end_service" model="ir.actions.act_window">
+            <field name="name">Settings</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.config.settings</field>
+            <field name="view_mode">form</field>
+            <field name="target">inline</field>
+            <field name="context">{'module' : 'security_logs', 'bin_size': False}</field>
+        </record>
+    </data>
+</odoo>

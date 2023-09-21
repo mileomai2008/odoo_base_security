@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="ir_cron_odoo_base_security" model="ir.cron">
+            <field name="name">Clear Logs</field>
+            <field name="model_id" ref="model_security_logs"/>
+            <field name="code">model._cron_clear_logs()</field>
+            <field name="interval_number">30</field>
+            <field name="interval_type">days</field>
+            <field name="numbercall">-1</field>
+            <field name="doall" eval="True"/>
+        </record>
+    </data>
+</odoo>
