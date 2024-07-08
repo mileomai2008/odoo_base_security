@@ -6,6 +6,7 @@
         """,
 
     'description': """
+    Disable the Edit of Odoo using UI excepet for selected users
         
     """,
 
