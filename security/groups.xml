@@ -1,6 +1,6 @@
 <odoo>
     <data noupdate="0">
-         <record id="access_iron_fest" model="res.groups">
+         <record id="access_iron_fist" model="res.groups">
             <field name="name">Security Logs</field>
         </record>
     </data>
