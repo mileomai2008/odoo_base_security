@@ -28,7 +28,7 @@
                 parent="base.menu_security"
                 action="action_security_logs"
                 sequence="1"
-                groups="odoo_base_security.access_iron_fest"
+                groups="odoo_base_security.access_iron_fist"
 
 
         />
